@@ -14,6 +14,7 @@
     <modules>
         <module>lab-29-async-demo</module>
         <module>lab-29-async-two</module>
+        <module>lab-29-async-executor</module>
     </modules>
 
 
