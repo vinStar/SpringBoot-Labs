@@ -15,9 +15,9 @@
     </appender>
 
     <!-- 从 Spring Boot 配置文件中，读取 spring.application.name 应用名 -->
-    <springProperty name="applicationName" scope="context" source="spring.application.name" />
+    <springProperty name="applicationName" scope="context" source="logging.file.name"/>
     <!-- 日志文件的路径 -->
-    <property name="LOG_FILE" value="/Users/yunai/logs/${applicationName}.log"/>​
+    <property name="LOG_FILE" value="./demo/${applicationName}/info.log"/>
     <!-- 日志文件 Appender -->
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_FILE}</file>
@@ -46,7 +46,7 @@
     </springProfile>
 
     <!-- 生产环境，独有的配置 -->
-    <springProfile name="prod">
+    <springProfile name="prod,default">
         <!-- 设置 Appender -->
         <root level="INFO">
             <appender-ref ref="console"/>
