@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.lab72.bean;
+package cn.iocoder.springboot.labs.bean;
 
 import lombok.ToString;
 

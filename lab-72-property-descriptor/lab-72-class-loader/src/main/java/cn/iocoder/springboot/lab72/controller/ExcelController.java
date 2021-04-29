@@ -1,8 +1,8 @@
 package cn.iocoder.springboot.lab72.controller;
 
 
-import cn.iocoder.springboot.lab72.bean.OrderInvoiceImportResultVO;
-import cn.iocoder.springboot.lab72.bean.OrderInvoiceImportVO;
+import cn.iocoder.springboot.lab72.bean.loader.OrderInvoiceImportResultVO;
+import cn.iocoder.springboot.lab72.bean.loader.OrderInvoiceImportVO;
 import cn.iocoder.springboot.lab72.utils.DateUtil;
 import cn.iocoder.springboot.lab72.utils.EasyExcelUtil;
 import cn.iocoder.springboot.lab72.utils.POIUtil;
