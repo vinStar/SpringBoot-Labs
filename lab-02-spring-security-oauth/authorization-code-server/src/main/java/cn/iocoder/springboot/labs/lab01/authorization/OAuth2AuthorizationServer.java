@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab01.authorization;
+package cn.iocoder.springboot.lab68.lab01.authorization;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;

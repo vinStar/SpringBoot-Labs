@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab01.resource.api;
+package cn.iocoder.springboot.lab68.lab01.resource.api;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,6 +1,6 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.config;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.config;
 
-import cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.listener.TestChannelTopicMessageListener;
+import cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.listener.TestChannelTopicMessageListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;

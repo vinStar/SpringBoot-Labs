@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.config;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

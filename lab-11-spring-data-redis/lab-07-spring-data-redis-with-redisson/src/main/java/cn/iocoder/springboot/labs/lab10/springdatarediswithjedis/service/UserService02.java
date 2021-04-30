@@ -1,7 +1,7 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.service;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.service;
 
-import cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.cacheobject.UserCacheObject;
-import cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.dao.redis.UserCacheDao;
+import cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.cacheobject.UserCacheObject;
+import cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.dao.redis.UserCacheDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

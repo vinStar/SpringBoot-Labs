@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab05.tomcat;
+package cn.iocoder.springboot.lab68.lab05.tomcat;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

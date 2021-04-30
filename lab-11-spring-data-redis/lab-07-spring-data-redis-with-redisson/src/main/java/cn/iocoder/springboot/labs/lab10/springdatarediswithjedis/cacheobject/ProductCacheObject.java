@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.cacheobject;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.cacheobject;
 
 /**
  * 商品缓存对象

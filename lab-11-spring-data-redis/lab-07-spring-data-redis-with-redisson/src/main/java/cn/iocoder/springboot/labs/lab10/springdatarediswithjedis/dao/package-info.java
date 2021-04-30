@@ -1,4 +1,4 @@
 /**
  * 数据库访问层
  */
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.dao;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.dao;

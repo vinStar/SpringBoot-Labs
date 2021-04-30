@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.listener;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.listener;
 
 import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.connection.MessageListener;

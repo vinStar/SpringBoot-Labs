@@ -1,7 +1,7 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis;
 
-import cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.cacheobject.UserCacheObject;
-import cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.service.UserService02;
+import cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.cacheobject.UserCacheObject;
+import cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.service.UserService02;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab07.springcloudgateway;
+package cn.iocoder.springboot.lab68.lab07.springcloudgateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

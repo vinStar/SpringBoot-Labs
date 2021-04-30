@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.service;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.service;
 
 import org.springframework.stereotype.Service;
 

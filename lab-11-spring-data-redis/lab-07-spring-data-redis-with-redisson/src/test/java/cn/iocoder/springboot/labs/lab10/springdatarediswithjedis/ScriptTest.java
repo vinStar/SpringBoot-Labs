@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;

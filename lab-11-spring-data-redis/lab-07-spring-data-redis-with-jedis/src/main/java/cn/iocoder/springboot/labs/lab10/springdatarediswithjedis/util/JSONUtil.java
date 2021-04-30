@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.util;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.util;
 
 import com.alibaba.fastjson.JSON;
 

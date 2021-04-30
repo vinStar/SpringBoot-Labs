@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <!--        <artifactId>lab-62-sofarpc-xml-demo</artifactId>-->
-        <!--        <groupId>cn.iocoder.springboot.labs</groupId>-->
+        <!--        <groupId>cn.iocoder.springboot.lab68</groupId>-->
         <!--        <version>1.0-SNAPSHOT</version>-->
         <groupId>com.alipay.sofa</groupId>
         <artifactId>sofaboot-dependencies</artifactId>

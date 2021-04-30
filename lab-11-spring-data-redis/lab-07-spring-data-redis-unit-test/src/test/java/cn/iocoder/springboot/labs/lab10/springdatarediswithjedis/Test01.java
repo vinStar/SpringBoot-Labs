@@ -1,6 +1,6 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis;
 
-import cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.config.TestRedisConfiguration;
+import cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.config.TestRedisConfiguration;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

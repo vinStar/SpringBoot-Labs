@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab69.intercept;
+package cn.iocoder.springboot.lab68.lab69.intercept;
 
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

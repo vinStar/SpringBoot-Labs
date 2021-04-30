@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.lab68.resourceserverdemo.config;
+package cn.iocoder.springboot.lab74.resourceserverdemo.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

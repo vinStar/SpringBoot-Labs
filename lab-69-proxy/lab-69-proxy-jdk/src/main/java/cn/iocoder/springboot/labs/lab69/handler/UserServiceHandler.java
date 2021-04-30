@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab69.handler;
+package cn.iocoder.springboot.lab68.lab69.handler;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

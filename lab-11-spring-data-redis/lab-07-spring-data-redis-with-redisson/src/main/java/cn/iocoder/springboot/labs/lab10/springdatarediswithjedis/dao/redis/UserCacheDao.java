@@ -1,7 +1,7 @@
-package cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.dao.redis;
+package cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.dao.redis;
 
-import cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.cacheobject.UserCacheObject;
-import cn.iocoder.springboot.labs.lab10.springdatarediswithjedis.util.JSONUtil;
+import cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.cacheobject.UserCacheObject;
+import cn.iocoder.springboot.lab68.lab10.springdatarediswithjedis.util.JSONUtil;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Repository;
 

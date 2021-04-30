@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.lab06.springmvc;
+package cn.iocoder.springboot.lab68.lab06.springmvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
