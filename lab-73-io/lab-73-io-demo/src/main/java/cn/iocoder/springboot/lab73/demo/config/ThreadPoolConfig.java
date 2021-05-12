@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.config;
+package cn.iocoder.springboot.lab73.demo.config;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import lombok.extern.slf4j.Slf4j;

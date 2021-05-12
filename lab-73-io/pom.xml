@@ -14,6 +14,8 @@
     <modules>
 
         <module>lab-73-io-demo</module>
+        <module>lab-73-io-socket</module>
+        <module>lab-73-io-sequential-access</module>
     </modules>
 
 </project>

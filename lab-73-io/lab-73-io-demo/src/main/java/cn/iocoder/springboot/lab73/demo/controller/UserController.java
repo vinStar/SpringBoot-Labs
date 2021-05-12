@@ -1,9 +1,9 @@
-package cn.iocoder.springboot.labs.controller;
+package cn.iocoder.springboot.lab73.demo.controller;
 
 
-import cn.iocoder.springboot.labs.utils.BusinessException;
-import cn.iocoder.springboot.labs.utils.DateUtil;
-import cn.iocoder.springboot.labs.utils.FileUtil;
+import cn.iocoder.springboot.lab73.demo.utils.DateUtil;
+import cn.iocoder.springboot.lab73.demo.utils.BusinessException;
+import cn.iocoder.springboot.lab73.demo.utils.FileUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

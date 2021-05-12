@@ -19,9 +19,11 @@ public class ThreadPoolUtil2 {
 
     @Bean(value = "planOrderTriggerTaskExecutor", destroyMethod = "shutdown")
     public ExecutorService planOrderTaskExecutor() {
+
         final ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat("PlanOrderTrigger-pool-trade %d ").build();
         //目前核心线程数先定在20 具体线程数看之后具体性能进行调节
         return new ThreadPoolExecutor(10, 30, 3000L, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<Runnable>(1024), threadFactory, new ThreadPoolExecutor.AbortPolicy());
+
     }
 
     @Bean("settleTaskExecutor")

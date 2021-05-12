@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.config;
+package cn.iocoder.springboot.lab73.demo.config;
 
 import org.springframework.context.annotation.Configuration;
 

@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs;
+package cn.iocoder.springboot.lab73.demo;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;

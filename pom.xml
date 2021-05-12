@@ -79,8 +79,8 @@
 <!--        <module>lab-69-proxy</module>-->
 <!--        <module>lab-70-db-doc</module>-->
 <!--        <module>lab-72-property-descriptor</module>-->
-<!--        <module>lab-73-io</module>-->
-        <module>lab-74-exception</module>
+        <module>lab-73-io</module>
+<!--        <module>lab-74-exception</module>-->
 
         <!-- Spring Cloud 示例 -->
 <!--        <module>labx-01-spring-cloud-alibaba-nacos-discovery</module>-->

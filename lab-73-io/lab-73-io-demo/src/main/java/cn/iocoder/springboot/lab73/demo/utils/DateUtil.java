@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.labs.utils;
+package cn.iocoder.springboot.lab73.demo.utils;
 
 
 import java.time.*;
