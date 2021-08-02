@@ -1,9 +1,29 @@
 server:
   port: 8079
 
+#spring:
+#  data:
+#    # Elasticsearch 配置项
+#    elasticsearch:
+#      cluster-name: elasticsearch2 # 集群名
+#      cluster-nodes: 127.0.0.1:9301 # 集群节点
+
+
+#spring:
+#  data:
+#    elasticsearch:
+#      cluster-name: elasticsearch
+#      cluster-nodes: 10.0.0.44:9300,10.0.0.45:9300,10.0.0.46:9300
+#  elasticsearch:
+#    rest:
+#      uris: ["http://10.0.0.44:9200","http://10.0.0.45:9200","http://10.0.0.46:9200"]
+
+
 spring:
-  data:
-    # Elasticsearch 配置项
-    elasticsearch:
-      cluster-name: elasticsearch2 # 集群名
-      cluster-nodes: 127.0.0.1:9301 # 集群节点
+#  data:
+#    elasticsearch:
+#      cluster-name: docker-cluster
+#      cluster-nodes: 127.0.0.1:9300
+  elasticsearch:
+    rest:
+      uris: [ "http://127.0.0.1:9200" ]

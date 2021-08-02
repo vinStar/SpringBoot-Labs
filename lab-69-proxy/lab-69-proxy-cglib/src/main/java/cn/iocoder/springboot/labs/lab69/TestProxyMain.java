@@ -1,7 +1,7 @@
-package cn.iocoder.springboot.lab68.lab69;
+package cn.iocoder.springboot.labs.lab69;
 
-import cn.iocoder.springboot.lab68.lab69.intercept.UserServiceMethodInterceptor;
-import cn.iocoder.springboot.lab68.lab69.service.UserServiceImpl;
+import cn.iocoder.springboot.lab69.intercept.UserServiceMethodInterceptor;
+import cn.iocoder.springboot.lab69.service.UserServiceImpl;
 import net.sf.cglib.proxy.Enhancer;
 
 public class TestProxyMain {

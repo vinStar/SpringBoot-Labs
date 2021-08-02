@@ -2,8 +2,14 @@ server:
   port: 8079
 
 spring:
-  data:
-    # Jest 配置项
+  elasticsearch:
     jest:
-      uri: http://127.0.0.1:9400
+      uris: http://127.0.0.1:9200
+#  elasticsearch:
+#    jest:
+#      uris: http://127.0.0.1:9200
+#  data:
+#    # Jest 配置项
+#    jest:
+#      uri: http://127.0.0.1:9400
 

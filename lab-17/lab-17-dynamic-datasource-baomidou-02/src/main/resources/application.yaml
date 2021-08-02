@@ -22,6 +22,10 @@ spring:
           driver-class-name: com.mysql.jdbc.Driver
           username: root
           password:
+      druid:
+        wall:
+          multi-statement-allow: true
+
 
 # mybatis 配置内容
 mybatis:

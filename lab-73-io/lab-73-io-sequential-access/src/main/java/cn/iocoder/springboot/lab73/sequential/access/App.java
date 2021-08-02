@@ -27,7 +27,7 @@ public class App {
         AtomicLong positionAtomic = new AtomicLong();
         positionAtomic.set(0L);
 
-       // LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss.SSS"));
+        // LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss.SSS"));
 
         log.info("position {}", position);
         log.info("positionAtomic start with {}", position);
@@ -40,10 +40,12 @@ public class App {
 //            position = fileWrite("./test.log", String.valueOf(stringBuilder), position);
 //        }
 
-        IntStream.range(1, 1024 * 10).parallel().forEach(i -> {
-                    positionAtomic.set(fileWriteAtom("./test.log", i+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"))+ System.getProperty("line.separator")));
+        IntStream.range(1, 10).parallel().forEach(i -> {
+                    positionAtomic.set(fileWriteAtom("./test.log", i + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")) + System.getProperty("line.separator")));
                 }
         );
+
+        sleep(20);
 
 
         log.info("position {}", position);
@@ -99,6 +101,14 @@ public class App {
             map = targetFileChannel.map(FileChannel.MapMode.READ_WRITE, 0, (long) 10 * 1024 * 1024);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    private static void sleep(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 

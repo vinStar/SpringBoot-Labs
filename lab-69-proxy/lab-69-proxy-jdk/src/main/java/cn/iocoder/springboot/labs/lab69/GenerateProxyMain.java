@@ -1,6 +1,6 @@
-package cn.iocoder.springboot.lab68.lab69;
+package cn.iocoder.springboot.labs.lab69;
 
-import cn.iocoder.springboot.lab68.lab69.service.UserServiceImpl;
+import cn.iocoder.springboot.labs.lab69.service.UserServiceImpl;
 import org.apache.commons.io.IOUtils;
 import sun.misc.ProxyGenerator;
 

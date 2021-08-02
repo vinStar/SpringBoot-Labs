@@ -1,4 +1,4 @@
-package cn.iocoder.springboot.lab68.lab69.service;
+package cn.iocoder.springboot.labs.lab69.service;
 
 public interface UserService {
 

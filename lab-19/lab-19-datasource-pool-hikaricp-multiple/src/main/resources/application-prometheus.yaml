@@ -1,0 +1,163 @@
+server:
+  port: 20004
+  tomcat:
+    max-threads: 100
+    # accesslog:
+    #   directory: /home/jump/educenter/logs # tomcat 访问日志 ,需要绝对路径
+    #   enabled: true # tomcat 开启访问，排查问题后关闭
+    #   pattern: '%{X-Real-IP}i - %{Host}i %t "%r" %{Content-Length}i %s %b %D "%{Referer}i" "%{User-Agent}i" %a "%I" "-"'
+    mbeanregistry: # metrics tomcat 线程数据
+      enabled: true
+  servlet:
+    # 应用上下文的前缀  所有的都需要有这个前缀 否则nginx转发swagger接口转发不了
+    context-path: /educenter
+spring:
+  datasource:
+    hikari:
+      #一个连接idle状态的最大时长（毫秒），超时则被释放（retired），缺省:10分钟
+      idle-timeout: 60000
+      #等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQLException， 缺省:30秒
+      connection-timeout: 60000
+      validation-timeout: 3000
+      login-timeout: 5
+      #一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒 参考 show variables like '%timeout%'  wait_timeout参数
+      max-lifetime: 60000
+      #连接池中允许的最大连接数。缺省值：10
+      maximum-pool-size: 60
+      minimum-idle: 10
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认为查询数据库query_1
+      datasource:
+        master: # 写入数据库
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://xxxx:3306/edu?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+          username: xxx
+          password: xxx
+        query_1: #只读数据库
+          url: jdbc:mysql://xxx:3306/edu?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+          username: xxx
+          password: xxx
+          driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: xxx
+    #Redis 配置
+  redis:
+    database: 23
+    address: redis://xxxx:6379
+    password: xxxx
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 5
+        max-wait: 2000ms
+        min-idle: 1
+      shutdown-timeout: 100ms
+  jackson: #springboot对应的接口返回是json数据，有部分空的内容需要干掉
+    #默认的属性  null值不返回
+    default-property-inclusion: non_null
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+    time-zone: GMT+8
+    date-format: yyyy/MM/dd HH:mm:ss
+  mail:
+    host: smtp.exmail.qq.com
+    username: developer@xxx.com
+    password: xxx
+    port: 465
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+  http: #http参数设置  默认编码为utf8
+    encoding:
+      charset: utf-8
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true #暂时关闭上传
+
+  kafka:
+    ordercenter:
+      topic: xxx
+      accept-msg-type: 1,2,3,5
+      groupId: xxx
+    educenter:
+      groupId: xxx
+      accept-msg-type: 5
+      #公共参数，其他的timeout.ms, request.timeout.ms, metadata.fetch.timeout.ms保持默认值
+    properties:
+      linger.ms: 50
+      max.in.flight.requests.per.connection: 1
+    bootstrap-servers: 172.26.0.151:9092,172.26.0.152:9092,172.26.0.153:9092
+    producer:
+      retries: 0
+      # 每次批量发送消息的数量
+      batch-size: 16384
+      buffer-memory: 33554432
+      # 指定消息key和消息体的编解码方式
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group: xxx-group
+      group-id: xxx-group
+      auto-offset-reset: latest
+      enable-auto-commit: false
+      auto-commit-interval: 100
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    topic:
+      name:
+        edu-event: xx
+        edu-event-key: xx
+        performance-event: xx
+        performance-event-key-calculate: xx
+      group-id:
+        distribution: xxGroupId
+    listener:
+      # 当每一条记录被消费者监听器（ListenerConsumer）处理之后提交
+      # RECORD
+      # 当每一批poll()的数据被消费者监听器（ListenerConsumer）处理之后提交
+      # BATCH
+      # 当每一批poll()的数据被消费者监听器（ListenerConsumer）处理之后，距离上次提交时间大于TIME时提交
+      # TIME
+      # 当每一批poll()的数据被消费者监听器（ListenerConsumer）处理之后，被处理record数量大于等于COUNT时提交
+      # COUNT
+      # TIME |　COUNT　有一个条件满足时提交
+      # COUNT_TIME
+      # 当每一批poll()的数据被消费者监听器（ListenerConsumer）处理之后, 手动调用Acknowledgment.acknowledge()后提交
+      # MANUAL
+      # 手动调用Acknowledgment.acknowledge()后立即提交
+      # MANUAL_IMMEDIATE
+      ack-mode: MANUAL_IMMEDIATE
+#pagehelper分页插件
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: pageNum=pageNum;pageSize=pageSize;count=countSql;reasonable=reasonable;pageSizeZero=pageSizeZero
+page:
+  size: 30
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  interceptor-format-flag: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  endpoint:
+    health:
+      show-details: ALWAYS
+  health:
+    redis:
+      enabled: false

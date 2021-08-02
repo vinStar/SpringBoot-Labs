@@ -1,8 +1,8 @@
-package cn.iocoder.springboot.lab68.lab69;
+package cn.iocoder.springboot.labs.lab69;
 
-import cn.iocoder.springboot.lab68.lab69.handler.UserServiceHandler;
-import cn.iocoder.springboot.lab68.lab69.service.UserService;
-import cn.iocoder.springboot.lab68.lab69.service.UserServiceImpl;
+import cn.iocoder.springboot.labs.lab69.handler.UserServiceHandler;
+import cn.iocoder.springboot.labs.lab69.service.UserService;
+import cn.iocoder.springboot.labs.lab69.service.UserServiceImpl;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
