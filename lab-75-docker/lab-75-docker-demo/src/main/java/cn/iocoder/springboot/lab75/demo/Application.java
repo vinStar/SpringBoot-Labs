@@ -3,12 +3,11 @@ package cn.iocoder.springboot.lab75.demo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @Slf4j
 @SpringBootApplication
+@EnableFeignClients
 public class Application {
 
     public static void main(String[] args) {
@@ -16,15 +15,7 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @PostConstruct
-    void init(){
 
-    }
-
-    @PreDestroy
-    void destory(){
-
-    }
 
 
 }

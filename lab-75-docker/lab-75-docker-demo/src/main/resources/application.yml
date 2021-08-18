@@ -1,0 +1,10 @@
+server:
+  port: 17000
+
+system:
+  url:
+    info: http://order-app
+
+spring:
+  application:
+    name: order-service

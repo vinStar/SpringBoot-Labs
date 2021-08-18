@@ -2,10 +2,10 @@ package cn.iocoder.springboot.lab75.demo.utils;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
 
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.ByteBuffer;
@@ -54,7 +54,7 @@ public class FileUtil {
     /**
      * NIO way
      */
-    public static byte[] toByteArray(String filename) throws IOException{
+    public static byte[] toByteArray(String filename) throws IOException {
         File f = new  File(filename);
         if (!f.exists()) {
             log.error("文件未找到！" + filename);
@@ -136,7 +136,7 @@ public class FileUtil {
      * @return 字节数组
      */
     public static byte[] inputStreamToByteArray(InputStream inputStream) throws IOException {
-        org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream outputStream = null;
+        ByteArrayOutputStream outputStream = null;
         try {
             outputStream = new ByteArrayOutputStream();
             // 设置缓冲区大小为1K
